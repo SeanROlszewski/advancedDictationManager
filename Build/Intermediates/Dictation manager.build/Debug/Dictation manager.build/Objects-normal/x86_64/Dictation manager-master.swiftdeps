@@ -1,0 +1,8 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "ba57140cf86a0954f06d280d0aadfc2f"
+build_time: [553559544, 462969000]
+inputs:
+  "/Users/seandorian/Code/Dictation manager/Dictation manager/ViewController.swift": [552937120, 0]
+  "/Users/seandorian/Code/Dictation manager/Dictation manager/AppDelegate.swift": [552937120, 0]
+  "/Users/seandorian/Code/Dictation manager/DictationCommands.swift": [553558600, 0]
+  "/Users/seandorian/Code/Dictation manager/Dictation manager/DictionaryExtensions.swift": [552966045, 0]

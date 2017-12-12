@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Custom.510768157.178158</key>
+	<dict>
+		<key>CustomScope</key>
+		<string>com.apple.dt.Xcode</string>
+		<key>CustomCommands</key>
+		<dict>
+			<key>en_US</key>
+			<array>
+				<string>Run my program</string>
+			</array>
+		</dict>
+		<key>CustomType</key>
+		<string>Shortcut</string>
+		<key>CustomAppName</key>
+		<string>Xcode</string>
+		<key>CustomModifyDate</key>
+		<date>2017-07-09T18:19:58Z</date>
+		<key>CustomShortcutModifierFlags</key>
+		<integer>1048576</integer>
+		<key>CustomShortcutKeyCode</key>
+		<integer>15</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "9b8b19f41c92effe06e58ed1708b3a01"
+build_time: [552937515, 928249000]
+inputs:
+  "/Users/seandorian/Code/Dictation manager/Dictation managerUITests/Dictation_managerUITests.swift": [552937121, 0]

@@ -13,7 +13,7 @@ protocol PropertyListRepresentation {
 }
 
 struct DictationCommand: PropertyListRepresentation {
-    let displayName: String
+    var displayName: String
     let phoneticName: String
     let lastModifiedDate: Date
     let kind: Kind
@@ -23,8 +23,8 @@ struct DictationCommand: PropertyListRepresentation {
         get {
             let scope = self.scope.propertyListRepresentation
             let kind = self.kind.propertyListRepresentation
-            let command = ["CustomCommands": ["en_US": [phoneticName]],
-                           "CustomModifyDate": lastModifiedDate] as [String : Any]
+            let command: [String : Any] = ["CustomCommands": ["en_US": [phoneticName]],
+                                           "CustomModifyDate": lastModifiedDate]
             let keys: [String] = scope.keys + kind.keys + command.keys
             let values: [Any] = scope.values + kind.values + command.values
             
@@ -85,22 +85,22 @@ struct DictationCommand: PropertyListRepresentation {
             return [dictationCommand]
         }
         
-        static func name(for command: Dictionary<String, Any>) -> String {
+        private static func name(for command: Dictionary<String, Any>) -> String {
             let names = command["CustomCommands"] as! Dictionary<String, [String]>
             return names["en_US"]!.first!
         }
         
-        static func date(for command: Dictionary<String, Any>) -> Date {
+        private static func date(for command: Dictionary<String, Any>) -> Date {
             return command["CustomModifyDate"] as! Date
         }
         
-        static func scope(for command: Dictionary<String, Any>) -> DictationCommand.Scope {
+        private static func scope(for command: Dictionary<String, Any>) -> Scope {
             let bundleID = command["CustomScope"] as! String
             let applicationName = command["CustomAppName"] as! String
             return .custom(bundleID, applicationName)
         }
         
-        static func kind(for command: Dictionary<String, Any>) -> DictationCommand.Kind {
+        private static func kind(for command: Dictionary<String, Any>) -> Kind {
             let keyCode = command["CustomShortcutKeyCode"] as! Int
             let modifierFlags = command["CustomShortcutModifierFlags"] as! Int
             return .pressKeyboardShortcut(keyCode, modifierFlags)
